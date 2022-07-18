@@ -9,7 +9,8 @@ namespace Dataplace.Imersao.Core.Domain.Orcamentos.Enums
     public enum OrcamentoStatusEnum
     {
         Aberto,
-        Fechado
+        Fechado,
+        Cancelado
     }
 
     public static class OrcamentoStatusEnumExtensions

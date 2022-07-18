@@ -66,6 +66,16 @@ namespace Dataplace.Imersao.Core.Domain.Orcamentos
             this.Validade = new OrcamentoValidade(this, diasValidade);
         }
 
+        public void CancelarOrcamento()
+        {
+            if (Situacao == OrcamentoStatusEnum.Fechado)
+                throw new DomainException("Orçamento já está fechado não cancelado!");
+
+            Situacao = OrcamentoStatusEnum.Cancelado;
+           
+        }
+
+
         #region validations
 
         public List<string> Validations;
@@ -78,6 +88,15 @@ namespace Dataplace.Imersao.Core.Domain.Orcamentos
 
             if (string.IsNullOrEmpty(CdFilial))
                 Validations.Add("Código da filial é requirido!");
+
+            if (string.IsNullOrEmpty(Usuario))
+                Validations.Add("Código codigo do usuario é requirido!");
+
+            if (string.IsNullOrEmpty(TabelaPreco.CdTabela))
+                Validations.Add("Tabela de Preço requirido!");
+
+            if (string.IsNullOrEmpty(Vendedor.Codigo))
+                Validations.Add("Código do Vendedor é requirido!");
 
             if (Validations.Count > 0)
                 return false;
