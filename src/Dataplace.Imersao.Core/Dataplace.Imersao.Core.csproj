@@ -52,6 +52,7 @@
     <Compile Include="Domain\Orcamentos\ValueObjects\OrcamentoTabelaPreco.cs" />
     <Compile Include="Domain\Orcamentos\ValueObjects\OrcamentoValidade.cs" />
     <Compile Include="Domain\Orcamentos\ValueObjects\OrcamentoVendedor.cs" />
+    <Compile Include="Domain\Orcamentos\ValueObjects\usuáriodoOrçamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -38,10 +38,14 @@ namespace Dataplace.Imersao.Core.Domain.Orcamentos
         public OrcamentoTabelaPreco TabelaPreco { get; private set; }
         public DateTime? DtFechamento { get; private set; }
         public OrcamentoVendedor Vendedor { get; private set; }
-        public string Usuario { get; private set; }
+        public usuárodoOrçamento Usuario { get; private set; }
         public OrcamentoStatusEnum Situacao { get; private set; }
         public ICollection<OrcamentoItem> Itens { get; private set; }
 
+        public void InsereItens(OrcamentoItem item)
+        {
+            Itens.Add(item);
+        }
 
         public void FecharOrcamento()
         {
